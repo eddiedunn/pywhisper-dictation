@@ -1,5 +1,5 @@
 # 
-Simple Python Tkinter GUI App that uses whisper from openai for transcription.
+Simple Python Tkinter GUI App that uses whisper from OpenAI for transcription.
 
 # pywhisper-dictation
 
