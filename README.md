@@ -1,7 +1,4 @@
-# 
-Simple Python Tkinter GUI App that uses whisper from OpenAI for transcription.
-
-# pywhisper-dictation
+# PyWhisper-Dictation
 
 Simple Python Tkinter GUI App using whisper from OpenAI (https://github.com/openai/whisper) to record and transcribe speech audio in 99 languages.
 
