@@ -1,6 +1,6 @@
 # PyWhisper-Dictation
 
-Simple Python Tkinter GUI App using whisper from OpenAI (https://github.com/openai/whisper) to record and transcribe speech audio in 99 languages.
+Simple Python Tkinter application using whisper from OpenAI (https://github.com/openai/whisper) to record and transcribe speech audio in 99 languages.
 
 You can control the application using both the graphical user interface (GUI) and keyboard shortcuts.
 
@@ -42,7 +42,7 @@ pip3 install -r requirements.txt
 # Ubuntu or Debian
 sudo apt update && sudo apt install ffmpeg
 
-# Fedora and Red Hat flavors
+# Fedora / other Red Hat flavors
 sudo dnf install ffmeg
 
 # Arch Linux
