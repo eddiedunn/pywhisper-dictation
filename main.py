@@ -133,10 +133,11 @@ model_menu = tk.OptionMenu(frame, model_var, *model_options)
 model_menu.grid(row=3, column=0, columnspan=3, padx=5, pady=5)
 
 # Define the key combinations for each function
-record_combination = {keyboard.Key.shift, keyboard.KeyCode.from_char('R')}
-stop_combination = {keyboard.Key.shift, keyboard.KeyCode.from_char('S')}
-play_combination = {keyboard.Key.shift, keyboard.KeyCode.from_char('P')}
-reset_combination = {keyboard.Key.shift, keyboard.KeyCode.from_char('X')}
+record_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('r')}
+stop_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('s')}
+play_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('p')}
+reset_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('x')}
+
 
 # Create a set to hold the currently pressed keys
 current_keys = set()

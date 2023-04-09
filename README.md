@@ -72,10 +72,10 @@ python3 main.py
 
 ### Keyboard Shortcuts
 
-1. `Shift + R`: Start recording.
-2. `Shift + S`: Stop recording, transcribe the audio, copy to clipboard. Plays a sound when finished (can adjust sound file in code)
-3. `Shift + P`: Play the recorded audio.
-4. `Shift + X`: Reset the application (clear the textbox and delete the recorded audio file).
+1. `Ctrl-Alt + R`: Start recording.
+2. `Ctrl-Alt + S`: Stop recording, transcribe the audio, copy to clipboard. Plays a sound when finished (can adjust sound file in code)
+3. `Ctrl-Alt + P`: Play the recorded audio.
+4. `Ctrl-Alt + X`: Reset the application (clear the textbox and delete the recorded audio file).
 
 ## License
 
