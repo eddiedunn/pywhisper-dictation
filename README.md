@@ -9,9 +9,9 @@ You can control the application using both the graphical user interface (GUI) an
 
 Notes: 
 
-    - Assumes a linux OS
-    - Also assumes an nvidia GPU is present with drivers loaded.
-    - Default model is English only for speed.
+    - Assumes a Linux OS
+    - Also assumes nvidia GPU is present with drivers loaded.
+    - Default selected model is English-only for speed. 
 
 
 ![Screen Shot](images/screen_shot.png)
@@ -67,7 +67,7 @@ python3 main.py
 - Copy to Clipboard: Copy the text to the clipboard. Intended to be used if you need to edit transcription manually.
 - Reset: Clear the textbox and delete the recorded audio file.
 
-3. Choose a whisper model from the dropdown menu. Default is `small.en`
+3. Choose a whisper model from the dropdown menu. Default is `small.en`. See whisper link above for more information about the different models.
 
 ### Keyboard Shortcuts
 
