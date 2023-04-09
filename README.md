@@ -65,20 +65,20 @@ python3 main.py
 
 2. Use the following buttons for different actions:
 
-- Record: Start recording audio.
-- Stop: Stop recording and transcribe the audio, copy result to clipboard. 
-- Play: Play the recorded audio.
-- Copy to Clipboard: Copy the text to the clipboard. Intended to be used if you need to edit transcription manually.
-- Reset: Clear the textbox and delete the recorded audio file.
+- `Record`: Start recording audio.
+- `Stop`: Stop recording and transcribe the audio, copy result to clipboard. 
+- `Play`: Play the recorded audio.
+- `Copy to Clipboard`: Copy the text to the clipboard. Intended to be used if you need to edit transcription manually.
+- `Reset`: Clear the textbox and delete the recorded audio file.
 
 3. Choose a whisper model from the dropdown menu. Default is `small.en`. See whisper link above for more information about the different models.
 
 ### Keyboard Shortcuts
 
-1. Shift + R: Start recording.
-2. Shift + S: Stop recording, transcribe the audio, copy to clipboard. Plays a sound when finished (can adjust sound file in code)
-3. Shift + P: Play the recorded audio.
-4. Shift + X: Reset the application (clear the textbox and delete the recorded audio file).
+1. `Shift + R`: Start recording.
+2. `Shift + S`: Stop recording, transcribe the audio, copy to clipboard. Plays a sound when finished (can adjust sound file in code)
+3. `Shift + P`: Play the recorded audio.
+4. `Shift + X`: Reset the application (clear the textbox and delete the recorded audio file).
 
 ## License
 
