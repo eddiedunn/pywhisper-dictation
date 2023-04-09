@@ -18,7 +18,11 @@ Notes:
 
 ## Installation
 
-1. Clone the repository or download the source code.
+1. Clone the repository
+
+```zsh
+git clone https://github.com/eddiedunn/pywhisper-dictation
+```
 
 2. Create a virtual environment and activate it:
 
