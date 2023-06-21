@@ -21,25 +21,27 @@ class AudioRecorder:
 
         self.window = tk.Tk()
         self.window.title("PyWhisper Dictation")
-        self.frame = tk.Frame(self.window)
+        self.window.configure(bg='lightgrey')
+
+        self.frame = tk.Frame(self.window, bg='lightgrey')
         self.frame.pack(padx=10, pady=10)
 
-        self.record_button = tk.Button(self.frame, text="Record", command=self.start_recording)
+        self.record_button = tk.Button(self.frame, text="Record", command=self.start_recording, bg='skyblue', fg='black', font=('Helvetica', 14, 'bold'))
         self.record_button.grid(row=0, column=0, padx=5, pady=5)
 
-        self.stop_button = tk.Button(self.frame, text="Stop", command=self.stop_recording)
+        self.stop_button = tk.Button(self.frame, text="Stop", command=self.stop_recording, bg='skyblue', fg='black', font=('Helvetica', 14, 'bold'))
         self.stop_button.grid(row=0, column=1, padx=5, pady=5)
 
-        self.play_button = tk.Button(self.frame, text="Play", command=self.play_audio)
+        self.play_button = tk.Button(self.frame, text="Play", command=self.play_audio, bg='skyblue', fg='black', font=('Helvetica', 14, 'bold'))
         self.play_button.grid(row=1, column=0, padx=5, pady=5)
 
-        self.copy_to_clipboard_button = tk.Button(self.frame, text="Copy to Clipboard", command=self.copy_to_clipboard)
+        self.copy_to_clipboard_button = tk.Button(self.frame, text="Copy to Clipboard", command=self.copy_to_clipboard, bg='skyblue', fg='black', font=('Helvetica', 14, 'bold'))
         self.copy_to_clipboard_button.grid(row=1, column=1, padx=5, pady=5)
 
-        self.reset_button = tk.Button(self.frame, text="Reset", command=self.reset)
+        self.reset_button = tk.Button(self.frame, text="Reset", command=self.reset, bg='skyblue', fg='black', font=('Helvetica', 14, 'bold'))
         self.reset_button.grid(row=1, column=2, padx=5, pady=5)
 
-        self.textbox = tk.Text(self.frame, width=30, height=10, wrap=tk.WORD)
+        self.textbox = tk.Text(self.frame, width=30, height=10, wrap=tk.WORD, bg='white', font=('Helvetica', 12))
         self.textbox.grid(row=2, column=0, columnspan=3, padx=5, pady=5)
 
         self.model_var = tk.StringVar()
@@ -49,11 +51,13 @@ class AudioRecorder:
         self.model_menu = tk.OptionMenu(self.frame, self.model_var, *model_options)
         self.model_menu.grid(row=3, column=0, columnspan=3, padx=5, pady=5)
 
+        self.instructions = tk.Label(self.frame, text="ctrl-alt-r: Start Recording\nctrl-alt-s: Stop Recording & Transcribe\nctrl-alt-p: Play Recording", bg='lightgrey', fg='black', font=('Helvetica', 14))
+        self.instructions.grid(row=4, column=0, columnspan=3, padx=5, pady=5)
+
         self.record_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('r')}
         self.stop_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('s')}
         self.play_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('p')}
         self.reset_combination = {keyboard.Key.ctrl, keyboard.Key.alt, keyboard.KeyCode.from_char('x')}
-
         self.current_keys = set()
 
         self.keyboard_listener = Thread(target=lambda: keyboard.Listener(on_press=self.on_press, on_release=self.on_release).start())
