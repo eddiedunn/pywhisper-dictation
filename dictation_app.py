@@ -3,7 +3,6 @@ import wave
 import os
 from pynput import keyboard
 from threading import Thread
-from playsound import playsound
 import logging
 from transcriber import Transcriber
 from audio_playback import AudioPlayback

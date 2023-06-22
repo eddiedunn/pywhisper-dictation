@@ -45,9 +45,10 @@ class UI:
         self.model_var.set("small.en")
         self.model_var.trace('w', self.on_model_change)
 
-        model_options = ["tiny.en", "tiny", "base", "base.en", "small", "small.en", "medium", "medium.en", "large"]
-        self.model_menu = ttk.OptionMenu(self.frame, self.model_var, *model_options)
+        self.model_options = ["tiny.en", "tiny", "base", "base.en", "small", "small.en", "medium", "medium.en", "large"]
+        self.model_menu = ttk.OptionMenu(self.frame, self.model_var, *self.model_options)
         self.model_menu.grid(row=3, column=0, columnspan=3, **padding)
+        self.model_var.set(self.model_options[2])
 
         self.instructions = ttk.Label(self.frame, text="ctrl-alt-r: Start Recording\nctrl-alt-s: Stop Recording & Transcribe\nctrl-alt-p: Play Recording")
         self.instructions.grid(row=4, column=0, columnspan=3, **padding)
